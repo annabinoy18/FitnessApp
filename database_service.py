@@ -58,3 +58,8 @@ def check_user(email, password):
     if user and check_password_hash(user["password"], password):
         return True  # Valid credentials
     return False  # Invalid credentials
+
+def get_all_users():
+    """Retrieve all user emails from the database."""
+    return [user["email"] for user in users_collection.find({}, {"_id": 0, "email": 1})]
+

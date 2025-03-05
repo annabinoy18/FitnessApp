@@ -20,7 +20,7 @@ def send_daily_workouts():
         print(f"📧 Sent to {user}")
 
 # Schedule the job to run at 1:00 AM daily
-scheduler.add_job(send_daily_workouts, 'cron', hour=4, minute=45)
+scheduler.add_job(send_daily_workouts, 'cron', hour=1, minute=55)
 
 if __name__ == "__main__":
     print("📅 Daily Email Scheduler Started...")
